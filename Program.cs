@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace MyApp
     {
@@ -19,6 +20,8 @@ namespace MyApp
                 Console.WriteLine("5 - Acessar Equals");
                 Console.WriteLine("6 - Acessar Indices");
                 Console.WriteLine("7 - Acessar Metodos Adicionais");
+                Console.WriteLine("8 - Acessar Manipulando Strings");
+                Console.WriteLine("9 - Acessar StringBuilder");
                 Console.WriteLine("0 - Sair");
                 Console.Write("\nEscolha uma opção: ");
                 var opcao = Console.ReadLine();
@@ -44,6 +47,12 @@ namespace MyApp
                         break;
                     case "7":
                         MetodosAdicionais();
+                        break;
+                    case "8":
+                        ManipulandoStrings();
+                        break;
+                    case "9":
+                        StringBuilder();
                         break;
                     case "0":
                         Console.WriteLine("Saindo...");
@@ -166,6 +175,52 @@ namespace MyApp
                 Console.WriteLine(texto.Insert(5, " inserido"));// insere uma string na posição informada
                 Console.WriteLine(texto.Remove(5, 3));// remove uma quantidade de caracteres a partir da posição informada
 
+
+                Menu();
+            }
+
+            static void ManipulandoStrings(){
+                Console.Clear();
+                Console.WriteLine("Manipulando strings");
+                var texto = "Texto de teste";
+                Console.WriteLine(texto.Replace("de", "para")); // substitui a primeira string pela segunda
+                Console.WriteLine(texto.Replace("aaa", "bbb")); 
+
+                var divisao = texto.Split(" "); // divide a string em um array de strings
+                foreach (var item in divisao)
+                {
+                    Console.WriteLine(item);
+                }
+                Console.WriteLine(divisao[0]);
+                Console.WriteLine(divisao[1]);
+                Console.WriteLine(divisao[2]);
+
+                var resultado = texto.Substring(9); // retorna a string a partir da posição informada
+                Console.WriteLine(resultado);
+                resultado = texto.Substring(5, 3); // retorna a string a partir da posição informada e com o tamanho informado
+                Console.WriteLine(resultado);
+                Console.WriteLine(resultado.Trim());
+
+                Menu();
+            }
+        
+            static void StringBuilder(){
+                Console.Clear();
+                Console.WriteLine("StringBuilder");
+
+                var texto = "testo de teste";
+                texto += " maior";
+                Console.WriteLine(texto);
+
+
+                var texto2 = new StringBuilder();// o stringbuild permite manipular strings de forma mais eficiente
+                texto2.Append("testo de teste");
+                texto2.Append(" maior");
+                texto2.Append(" de maneira");
+                texto2.Append(" mais eficiente");
+
+                texto2.ToString();//conbversão pois o text2 é do tipo stringbuilder e nao string
+                Console.WriteLine(texto2);
 
                 Menu();
             }

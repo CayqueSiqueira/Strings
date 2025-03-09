@@ -12,3 +12,4 @@ C:\dev\Strings\obj\Debug\net8.0\refint\Strings.dll
 C:\dev\Strings\obj\Debug\net8.0\Strings.pdb
 C:\dev\Strings\obj\Debug\net8.0\Strings.genruntimeconfig.cache
 C:\dev\Strings\obj\Debug\net8.0\ref\Strings.dll
+C:\dev\Strings\obj\Debug\net8.0\Strings.sourcelink.json
